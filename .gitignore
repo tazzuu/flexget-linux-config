@@ -1,2 +1,7 @@
 flexget.log
 .flexget
+*.torrent
+.bash_history
+.config-lock
+.sqlite
+*.sqlite

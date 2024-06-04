@@ -50,11 +50,22 @@ docker logs flexget
 
 ### Config
 
+The Flexget config file is already included at the location `config/config.yml`. This directory will be mounted by the Docker container and the file read by Flexget. You can update it with your customized URLs and settings. You can also use the Flexget web dashboard to modify the config file.
+
+If you want to manually kick off or test the download tasks, you can first enter the running Docker container
+
 ```bash
-flexget execute --tasks linuxtracker-rss --no-cache
-flexget execute --tasks linuxtracker-rss --now
-flexget --test execute --tasks linuxtracker-rss
+# might need to add the args -ti in between exec and flexget, maybe
+docker compose exec flexget bash
 ```
+
+Inside the container, you can preview the tasks with this command
+
+```bash
+flexget --test execute
+```
+
+If it looks good, then you can remove the `--test` arg to run it for real.
 
 # Resources
 
