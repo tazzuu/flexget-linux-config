@@ -19,3 +19,39 @@ services:
       - 5050:5050
     restart: unless-stopped
 
+  # example Deluge container service
+  # deluge:
+  # image: lscr.io/linuxserver/deluge:latest
+  # container_name: deluge
+  # environment:
+  #   - PUID=1000
+  #   - PGID=1000
+  #   - TZ=EST
+  #   - DELUGE_LOGLEVEL=error #optional
+  # volumes:
+  #   - ./deluge/config:/config # make this dir to hold your Deluge config files
+  #   - ./data/:/data/ # this is the flexget data dir from above where the .torrent files will be download to by flexget
+  #   - /mnt/bigdata:/mnt/bigdata # this is some giant disk you are gonna seed the torrents from
+
+  # ports:
+  #   - 8112:8112 # web interface
+  #   # make sure to allow these ports through your server firewall,
+  #   # and enable them for port forwarding on your router,
+  #   # and make sure Deluge has them enabled for use
+  #   - 6881:6881
+  #   - 6881:6881/udp
+  #   - 6882:6882
+  #   - 6882:6882/udp
+  #   - 6883:6883
+  #   - 6883:6883/udp
+  #   - 6884:6884
+  #   - 6884:6884/udp
+  #   - 6885:6885
+  #   - 6885:6885/udp
+  #   - 6886:6886
+  #   - 6886:6886/udp
+  #   # daemon port
+  #   #- 58846:58846 #optional
+  # restart: unless-stopped
+
+
