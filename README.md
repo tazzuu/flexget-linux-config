@@ -10,7 +10,7 @@ Because c'mon, who are we kidding, the Deluge plugin installation and management
 
 So you want to configure your Deluge torrent client on your headless server (or seedbox)? Instead of glueing your RSS retrieval to a specific torrent download client, the ["best"](https://www.reddit.com/r/torrents/comments/amriu4/comment/efo4i7n/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1) method is to just offload the RSS handling to a separate service.
 
-This demo config will be using [Flexget](https://github.com/Flexget/Flexget) in order to automate the retrieval of .torrent files from an RSS feed. This super simple example will deposit the files into directory. Then, you can use the built-in "AutoAdd" Deluge plugin (no install necessary) to automatically import the new .torrent files into your Deluge service.
+This demo config will be using [Flexget](https://github.com/Flexget/Flexget) in order to automate the retrieval of .torrent files from an RSS feed. This super simple example will deposit the files into the directory `data`. Then, you can use the built-in "AutoAdd" Deluge plugin (no install necessary) to automatically import the new .torrent files into your Deluge service.
 
 ## RSS Feeds
 
@@ -72,6 +72,8 @@ If it looks good, then you can remove the `--test` arg to run it for real.
 Over in your running Deluge instance, you will want to enable the "AutoAdd" plugin, and point it to your directories of torrents downloaded by Flexget and mounted inside your Deluge docker container instance.
 
 - an example of a Deluge recipe has been included in the `docker-compose.yml` file which you may use as a template for running Deluge
+
+Congrats, you now have automatic RSS download of .torrent files and automated adding of those torrents in your Deluge running on your headless server.
 
 # Resources
 
