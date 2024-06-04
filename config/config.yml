@@ -6,15 +6,15 @@ web_server:
 tasks:
   distrowatch-rss:
     rss:
-        url: https://distrowatch.com/news/torrents.xml
-        all_entries: no
+      url: https://distrowatch.com/news/torrents.xml
+      all_entries: no
     download: /data/distrowatch
     accept_all: yes
 
   linuxtracker-rss:
     rss:
-        url: https://linuxtracker.org/rss_torrents.php?feed=dl&pid=<your_id_here>
-        all_entries: no
+      url: https://linuxtracker.org/rss_torrents.php?feed=dl&cat[]=563&pid=00000000000000000000000000000000
+      all_entries: no
     download: /data/linuxtracker
     accept_all: yes
 

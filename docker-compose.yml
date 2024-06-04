@@ -10,7 +10,7 @@ services:
       - TZ=EST
       - FG_LOG_LEVEL=info
       - FG_LOG_FILE=/config/flexget.log
-      - FG_CONFIG_FILE=/config/.flexget/config.yml
+      - FG_CONFIG_FILE=/config/config.yml
       - FG_WEBUI_PASSWORD=somepasswordgoeshere #optional
     volumes:
       - ./config:/config
