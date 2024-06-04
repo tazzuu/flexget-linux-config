@@ -67,6 +67,12 @@ flexget --test execute
 
 If it looks good, then you can remove the `--test` arg to run it for real.
 
+### Add to Deluge
+
+Over in your running Deluge instance, you will want to enable the "AutoAdd" plugin, and point it to your directories of torrents downloaded by Flexget and mounted inside your Deluge docker container instance.
+
+- an example of a Deluge recipe has been included in the `docker-compose.yml` file which you may use as a template for running Deluge
+
 # Resources
 
 - FlexGet web pages
