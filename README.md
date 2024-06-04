@@ -8,7 +8,7 @@ Because c'mon, who are we kidding, the Deluge plugin installation and management
 
 -----
 
-So you want to configure your Deluge torrent client on your headless server (or seedbox)? Instead of glueing your RSS retrieval to a specific client, the ["best"](https://www.reddit.com/r/torrents/comments/amriu4/comment/efo4i7n/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1) method is to just offload the RSS handling to a separate service.
+So you want to configure your Deluge torrent client on your headless server (or seedbox)? Instead of glueing your RSS retrieval to a specific torrent download client, the ["best"](https://www.reddit.com/r/torrents/comments/amriu4/comment/efo4i7n/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1) method is to just offload the RSS handling to a separate service.
 
 This demo config will be using [Flexget](https://github.com/Flexget/Flexget) in order to automate the retrieval of .torrent files from an RSS feed. This super simple example will deposit the files into directory. Then, you can use the built-in "AutoAdd" Deluge plugin (no install necessary) to automatically import the new .torrent files into your Deluge service.
 
