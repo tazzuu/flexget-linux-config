@@ -83,3 +83,20 @@ Congrats, you now have automatic RSS download of .torrent files and automated ad
   -  https://flexget.com/en/Configuration
 
 - container taken from here: https://docs.linuxserver.io/images/docker-flexget/
+
+
+# Bonus Material
+
+Whats that? You dont actually want an RSS feed? You just want to scrape all the .torrent files off of a website? Hmmm...
+
+```bash
+# warning: dont get yourself banned for scraping
+wget -nd -r -P . -A torrent "https://old-releases.ubuntu.com/releases"
+wget -nd -r -P . -A torrent "https://torrent.resonatingmedia.com/torrents/"
+wget -nd -r -P . -A torrent "https://cdimage.debian.org/debian-cd/"
+wget -nd -r -P . -A torrent "https://cdimage.ubuntu.com/lubuntu/releases/"
+wget -nd -r -P . -A torrent "https://torrent.ubuntu.com/xubuntu/releases/"
+
+# doesnt work anymore.. ; https://distrowatch.com/dwres.php?resource=bittorrent
+wget -nd -r -P . -A torrent "https://distrowatch.com/dwres/torrents/"
+```
